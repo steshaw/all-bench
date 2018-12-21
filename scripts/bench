@@ -1,0 +1,3 @@
+#!/bin/sh
+
+stack bench --benchmark-arguments '--output all-bench.html'

@@ -1,0 +1,21 @@
+name: all
+
+dependencies:
+# base-4.11.1.0
+- base >= 4.11 && < 5
+
+- criterion
+- mtl
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+- -Werror
+
+benchmarks:
+  all-bench:
+    main: all-bench.hs
+    ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
